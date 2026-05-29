@@ -167,4 +167,26 @@ public:
                   << notaFinal << "\n";
     }
 };
+Estudiante* buscarEstudiante(
+    const std::vector<Estudiante*>& estudiantes,
+    const std::string& doc) {
 
+    for (auto* est : estudiantes) {
+        if (est->getDocumento() == doc) {
+            return est;
+        }
+    }
+    return nullptr;
+}
+
+Curso* buscarCurso(
+    const std::vector<Curso*>& cursos,
+    const std::string& cod) {
+
+    for (auto* cur : cursos) {
+        if (cur->getCodigoCurso() == cod) {
+            return cur;
+        }
+    }
+    return nullptr;
+}
