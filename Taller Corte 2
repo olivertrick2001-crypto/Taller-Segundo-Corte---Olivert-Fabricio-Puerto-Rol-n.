@@ -34,5 +34,41 @@ public:
 
     virtual void mostrarInformacion() const = 0;
 };
+class Estudiante : public Persona {
+private:
+    std::string codigo;
+    int semestre;
+    double promedio;
+
+public:
+    Estudiante(std::string nombre, std::string apellido, int edad, std::string documento,
+               std::string codigo, int semestre, double promedio)
+        : Persona(nombre, apellido, edad, documento),
+          codigo(codigo), semestre(semestre), promedio(promedio) {}
+
+    ~Estudiante() override {}
+
+    std::string getCodigo() const { return codigo; }
+    void setCodigo(std::string codigo) { this->codigo = codigo; }
+
+    int getSemestre() const { return semestre; }
+    void setSemestre(int semestre) { this->semestre = semestre; }
+
+    double getPromedio() const { return promedio; }
+    void setPromedio(double promedio) { this->promedio = promedio; }
+
+    void inscribirCurso() {
+        std::cout << "El estudiante " << getNombre()
+                  << " ha inscrito una asignatura.\n";
+    }
+
+    void mostrarInformacion() const override {
+        std::cout << "[Estudiante] "
+                  << getNombre() << " "
+                  << getApellido()
+                  << " | Codigo: " << codigo
+                  << " | Promedio: " << promedio << "\n";
+    }
+};
 
 
