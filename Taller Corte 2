@@ -220,4 +220,16 @@ int main() {
     else if (opcion == 2){
 
     }
-    
+    else if (opcion == 3){
+
+    }
+    else if (opcion == 4){
+
+    }
+    else if (opcion == 5){
+
+    }
+    else if (opcion == 7){
+
+    }
+} while (opcion != 9);
