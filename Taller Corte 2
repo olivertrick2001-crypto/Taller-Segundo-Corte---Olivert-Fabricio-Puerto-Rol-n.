@@ -141,5 +141,30 @@ public:
         return nombreCurso;
     }
 };
+class Matricula {
+private:
+    Estudiante* estudiante;
+    Curso* curso;
+    std::string estadoMatricula;
+    double notaFinal;
 
+public:
+    Matricula(Estudiante* estudiante,
+              Curso* curso,
+              std::string estadoMatricula,
+              double notaFinal)
+        : estudiante(estudiante),
+          curso(curso),
+          estadoMatricula(estadoMatricula),
+          notaFinal(notaFinal) {}
+
+    void mostrarReporte() const {
+        std::cout << "[Matricula] "
+                  << estudiante->getNombre()
+                  << " | Curso: "
+                  << curso->getNombreCurso()
+                  << " | Nota: "
+                  << notaFinal << "\n";
+    }
+};
 
