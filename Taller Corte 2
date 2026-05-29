@@ -70,5 +70,47 @@ public:
                   << " | Promedio: " << promedio << "\n";
     }
 };
+class Profesor : public Persona {
+private:
+    std::string especialidad;
+    double salario;
+
+public:
+    Profesor(std::string nombre, std::string apellido, int edad,
+             std::string documento, std::string especialidad,
+             double salario)
+        : Persona(nombre, apellido, edad, documento),
+          especialidad(especialidad), salario(salario) {}
+
+    ~Profesor() override {}
+
+    std::string getEspecialidad() const {
+        return especialidad;
+    }
+
+    void setEspecialidad(std::string especialidad) {
+        this->especialidad = especialidad;
+    }
+
+    double getSalario() const {
+        return salario;
+    }
+
+    void setSalario(double salario) {
+        this->salario = salario;
+    }
+
+    void asignarCurso() {
+        std::cout << "Curso asignado al profesor "
+                  << getNombre() << "\n";
+    }
+
+    void mostrarInformacion() const override {
+        std::cout << "[Profesor] "
+                  << getNombre()
+                  << " | Especialidad: "
+                  << especialidad << "\n";
+    }
+};
 
 
