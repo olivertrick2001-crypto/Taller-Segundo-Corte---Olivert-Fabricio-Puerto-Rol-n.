@@ -233,3 +233,10 @@ int main() {
 
     }
 } while (opcion != 9);
+  for (auto* e : listaEstudiantes) delete e;
+    for (auto* p : listaProfesores) delete p;
+    for (auto* c : listaCursos) delete c;
+    for (auto* m : listaMatriculas) delete m;
+
+    return 0;
+}
