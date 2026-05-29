@@ -214,3 +214,6 @@ int main() {
 
         std::cin >> opcion;
         std::cin.ignore();
+    if (opcion ==1){
+        
+    }
