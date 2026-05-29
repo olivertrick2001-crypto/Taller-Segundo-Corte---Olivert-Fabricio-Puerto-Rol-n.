@@ -34,6 +34,12 @@ public:
 
     virtual void mostrarInformacion() const = 0;
 };
+
+/**
+ * @class Estudiante
+ * @brief Clase derivada que representa a un alumno.
+ */
+
 class Estudiante : public Persona {
 private:
     std::string codigo;
@@ -62,6 +68,10 @@ public:
                   << " ha inscrito una asignatura.\n";
     }
 
+/**
+     * @brief Implementación polimórfica de mostrarInformacion.
+     */
+
     void mostrarInformacion() const override {
         std::cout << "[Estudiante] "
                   << getNombre() << " "
@@ -70,6 +80,12 @@ public:
                   << " | Promedio: " << promedio << "\n";
     }
 };
+
+/**
+ * @class Profesor
+ * @brief Clase derivada que representa a un docente.
+ */
+
 class Profesor : public Persona {
 private:
     std::string especialidad;
@@ -105,6 +121,10 @@ public:
                   << getNombre() << "\n";
     }
 
+    /**
+     * @brief Implementación polimórfica de mostrarInformacion.
+     */
+
     void mostrarInformacion() const override {
         std::cout << "[Profesor] "
                   << getNombre()
@@ -112,6 +132,12 @@ public:
                   << especialidad << "\n";
     }
 };
+
+/**
+ * @class Curso
+ * @brief Representa una materia académica.
+ */
+
 class Curso {
 private:
     std::string nombreCurso;
@@ -141,6 +167,12 @@ public:
         return nombreCurso;
     }
 };
+
+/**
+ * @class Matricula
+ * @brief Gestiona la relación intermedia asociativa entre Estudiante y Curso.
+ */
+
 class Matricula {
 private:
     Estudiante* estudiante;
