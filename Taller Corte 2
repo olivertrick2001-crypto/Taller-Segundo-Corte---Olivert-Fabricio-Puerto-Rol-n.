@@ -1,3 +1,11 @@
 
+/**
+ * @file main.cpp
+ * @brief Solución Completa Unificada - Sistema de Gestión Académica Universitaria
+ */
+
 #include <iostream>
-#include <stdio.h>
+#include <vector>
+#include <string>
+
+
